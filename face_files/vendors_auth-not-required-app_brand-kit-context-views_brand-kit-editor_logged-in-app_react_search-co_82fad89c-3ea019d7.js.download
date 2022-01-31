@@ -1,0 +1,499 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([["vendors~auth-not-required-app~brand-kit-context-views~brand-kit-editor~logged-in-app~react~search-co~82fad89c"],{1291:function(e,t,r){"use strict";r.d(t,"f",(function(){return s})),r.d(t,"g",(function(){return i})),r.d(t,"b",(function(){return n})),r.d(t,"a",(function(){return o})),r.d(t,"d",(function(){return c})),r.d(t,"c",(function(){return d})),r.d(t,"e",(function(){return p}));
+/**
+ * @license
+ * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
+ * This code may only be used under the BSD style license found at
+ * http://polymer.github.io/LICENSE.txt
+ * The complete set of authors may be found at
+ * http://polymer.github.io/AUTHORS.txt
+ * The complete set of contributors may be found at
+ * http://polymer.github.io/CONTRIBUTORS.txt
+ * Code distributed by Google as part of the polymer project is also
+ * subject to an additional IP rights grant found at
+ * http://polymer.github.io/PATENTS.txt
+ */
+const s=`{{lit-${String(Math.random()).slice(2)}}}`,i=`\x3c!--${s}--\x3e`,a=new RegExp(`${s}|${i}`),n="$lit$";class o{constructor(e,t){this.parts=[],this.element=t;const r=[],i=[],o=document.createTreeWalker(t.content,133,null,!1);let c=0,u=-1,h=0;const{strings:m,values:{length:g}}=e;for(;h<g;){const e=o.nextNode();if(null!==e){if(u++,1===e.nodeType){if(e.hasAttributes()){const t=e.attributes,{length:r}=t;let s=0;for(let e=0;e<r;e++)l(t[e].name,n)&&s++;for(;s-- >0;){const t=m[h],r=p.exec(t)[2],s=r.toLowerCase()+n,i=e.getAttribute(s);e.removeAttribute(s);const o=i.split(a);this.parts.push({type:"attribute",index:u,name:r,strings:o}),h+=o.length-1}}"TEMPLATE"===e.tagName&&(i.push(e),o.currentNode=e.content)}else if(3===e.nodeType){const t=e.data;if(t.indexOf(s)>=0){const s=e.parentNode,i=t.split(a),o=i.length-1;for(let t=0;t<o;t++){let r,a=i[t];if(""===a)r=d();else{const e=p.exec(a);null!==e&&l(e[2],n)&&(a=a.slice(0,e.index)+e[1]+e[2].slice(0,-n.length)+e[3]),r=document.createTextNode(a)}s.insertBefore(r,e),this.parts.push({type:"node",index:++u})}""===i[o]?(s.insertBefore(d(),e),r.push(e)):e.data=i[o],h+=o}}else if(8===e.nodeType)if(e.data===s){const t=e.parentNode;null!==e.previousSibling&&u!==c||(u++,t.insertBefore(d(),e)),c=u,this.parts.push({type:"node",index:u}),null===e.nextSibling?e.data="":(r.push(e),u--),h++}else{let t=-1;for(;-1!==(t=e.data.indexOf(s,t+1));)this.parts.push({type:"node",index:-1}),h++}}else o.currentNode=i.pop()}for(const s of r)s.parentNode.removeChild(s)}}const l=(e,t)=>{const r=e.length-t.length;return r>=0&&e.slice(r)===t},c=e=>-1!==e.index,d=()=>document.createComment(""),p=/([ \x09\x0a\x0c\x0d])([^\0-\x1F\x7F-\x9F "'>=/]+)([ \x09\x0a\x0c\x0d]*=[ \x09\x0a\x0c\x0d]*(?:[^ \x09\x0a\x0c\x0d"'`<>=]*|"[^"]*|'[^']*))$/},1305:function(e,t,r){"use strict";r.d(t,"a",(function(){return w}));function s(e,t,r,s){var i,a=arguments.length,n=a<3?t:null===s?s=Object.getOwnPropertyDescriptor(t,r):s;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)n=Reflect.decorate(e,t,r,s);else for(var o=e.length-1;o>=0;o--)(i=e[o])&&(n=(a<3?i(n):a>3?i(t,r,n):i(t,r))||n);return a>3&&n&&Object.defineProperty(t,r,n),n}Object.create;Object.create;var i=r(2832),a=r(801);function n(e,{validSizes:t=["s","m","l","xl"],noDefaultSize:r}={}){class s extends e{constructor(){super(...arguments),this._size="m"}get size(){return this._size||"m"}set size(e){const s=r?null:"m",i=e?e.toLocaleLowerCase():e,a=t.includes(i)?i:s;if(a&&this.setAttribute("size",a),this._size===a)return;const n=this._size;this._size=a,this.requestUpdate("size",n)}firstUpdated(e){super.firstUpdated(e),this.hasAttribute("size")||r||this.setAttribute("size",this.size)}}return Object(i.a)([Object(a.d)({type:String,reflect:!0})],s.prototype,"size",null),s}var o=r(4395);
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */function l(e,t,r,s){var i,a=arguments.length,n=a<3?t:null===s?s=Object.getOwnPropertyDescriptor(t,r):s;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)n=Reflect.decorate(e,t,r,s);else for(var o=e.length-1;o>=0;o--)(i=e[o])&&(n=(a<3?i(n):a>3?i(t,r,n):i(t,r))||n);return a>3&&n&&Object.defineProperty(t,r,n),n}Object.create;Object.create;function c(e,t,r,s){var i,a=arguments.length,n=a<3?t:null===s?s=Object.getOwnPropertyDescriptor(t,r):s;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)n=Reflect.decorate(e,t,r,s);else for(var o=e.length-1;o>=0;o--)(i=e[o])&&(n=(a<3?i(n):a>3?i(t,r,n):i(t,r))||n);return a>3&&n&&Object.defineProperty(t,r,n),n}Object.create;Object.create;var d=a.b`
+:host{fill:currentColor;color:inherit;display:inline-block;pointer-events:none}:host(:not(:root)){overflow:hidden}@media (forced-colors:active){.spectrum-UIIcon,:host{forced-color-adjust:auto}}:host{--spectrum-icon-size-s:var(
+--spectrum-alias-workflow-icon-size-s,var(--spectrum-global-dimension-size-200)
+);--spectrum-icon-size-m:var(
+--spectrum-alias-workflow-icon-size-m,var(--spectrum-global-dimension-size-225)
+);--spectrum-icon-size-l:var(--spectrum-alias-workflow-icon-size-l);--spectrum-icon-size-xl:var(
+--spectrum-alias-workflow-icon-size-xl,var(--spectrum-global-dimension-size-275)
+);--spectrum-icon-size-xxl:var(--spectrum-global-dimension-size-400)}:host([size=s]){height:var(
+--spectrum-icon-size-s
+);width:var(--spectrum-icon-size-s)}:host([size=m]){height:var(
+--spectrum-icon-size-m
+);width:var(--spectrum-icon-size-m)}:host([size=l]){height:var(
+--spectrum-icon-size-l
+);width:var(--spectrum-icon-size-l)}:host([size=xl]){height:var(
+--spectrum-icon-size-xl
+);width:var(--spectrum-icon-size-xl)}:host([size=xxl]){height:var(
+--spectrum-icon-size-xxl
+);width:var(--spectrum-icon-size-xxl)}:host{height:var(
+--spectrum-icon-tshirt-size-height,var(
+--spectrum-alias-workflow-icon-size,var(--spectrum-global-dimension-size-225)
+)
+);width:var(
+--spectrum-icon-tshirt-size-width,var(
+--spectrum-alias-workflow-icon-size,var(--spectrum-global-dimension-size-225)
+)
+)}#container{height:100%}::slotted(*),img,svg{height:100%;vertical-align:top;width:100%}
+`;class p extends o.a{static get styles(){return[d]}render(){return a.c`
+            <slot></slot>
+        `}}let u;c([Object(a.d)()],p.prototype,"label",void 0),c([Object(a.d)({reflect:!0})],p.prototype,"size",void 0);const h=function(e,...t){return u?u(e,...t):t.reduce((t,r,s)=>t+r+e[s+1],e[0])},m=e=>{u=e},g=()=>h`<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 8 8"
+    aria-hidden="true"
+    fill="currentColor"
+  >
+    <path
+      d="M6.575 6.555c.055.056.092.13 0 .2l-1.149.741c-.092.056-.129.019-.166-.074L3.834 4.94 1.963 7c-.019.036-.074.073-.129 0l-.889-.927c-.093-.055-.074-.111 0-.166l2.111-1.76L.648 3.24c-.037 0-.092-.074-.056-.167l.63-1.259a.097.097 0 01.167-.036L3.5 3.148l.13-2.7a.1.1 0 01.081-.111.15.15 0 01.03 0l1.537.2c.093 0 .111.037.093.13l-.723 2.647 2.445-.741c.055-.037.111-.037.148.074l.241 1.37c.018.093 0 .13-.074.13l-2.556.2z"
+    />
+  </svg>`;customElements.get("sp-icon-asterisk100")&&console.warn("sp-icon-asterisk100 already defined!"),!customElements.get("sp-icon-asterisk100")&&customElements.define("sp-icon-asterisk100",class extends p{render(){return m(a.c),g()}});var b=a.b`
+@media (forced-colors:active){.spectrum-Icon,.spectrum-UIIcon{forced-color-adjust:auto}}.spectrum-UIIcon-Asterisk75{height:var(--spectrum-alias-ui-icon-asterisk-size-300);width:var(
+--spectrum-alias-ui-icon-asterisk-size-75,var(--spectrum-global-dimension-static-size-100)
+)}.spectrum-UIIcon-Asterisk100{height:var(
+--spectrum-alias-ui-icon-asterisk-size-100,var(--spectrum-global-dimension-size-100)
+);width:var(
+--spectrum-alias-ui-icon-asterisk-size-100,var(--spectrum-global-dimension-size-100)
+)}.spectrum-UIIcon-Asterisk200{height:var(--spectrum-alias-ui-icon-asterisk-size-200);width:var(
+--spectrum-alias-ui-icon-asterisk-size-200
+)}.spectrum-UIIcon-Asterisk300{height:var(--spectrum-alias-ui-icon-asterisk-size-300);width:var(
+--spectrum-alias-ui-icon-asterisk-size-300
+)}
+`;var f=a.b`
+:host([size=s]){--spectrum-fieldlabel-text-font-weight:var(
+--spectrum-fieldlabel-s-text-font-weight,var(--spectrum-alias-body-text-font-weight)
+);--spectrum-fieldlabel-text-line-height:var(
+--spectrum-fieldlabel-s-text-line-height,var(--spectrum-alias-component-text-line-height)
+);--spectrum-fieldlabel-text-size:var(
+--spectrum-fieldlabel-s-text-size,var(--spectrum-global-dimension-font-size-75)
+);--spectrum-fieldlabel-asterisk-gap:var(
+--spectrum-fieldlabel-s-asterisk-gap,var(--spectrum-global-dimension-size-25)
+);--spectrum-fieldlabel-asterisk-margin-y:var(
+--spectrum-fieldlabel-s-asterisk-margin-y,var(--spectrum-global-dimension-size-50)
+);--spectrum-fieldlabel-padding-top:var(
+--spectrum-fieldlabel-s-padding-top,var(--spectrum-global-dimension-size-50)
+);--spectrum-fieldlabel-padding-bottom:var(
+--spectrum-fieldlabel-s-padding-bottom,var(--spectrum-global-dimension-size-65)
+)}:host([size=m]){--spectrum-fieldlabel-text-font-weight:var(
+--spectrum-fieldlabel-m-text-font-weight,var(--spectrum-alias-body-text-font-weight)
+);--spectrum-fieldlabel-text-line-height:var(
+--spectrum-fieldlabel-m-text-line-height,var(--spectrum-alias-component-text-line-height)
+);--spectrum-fieldlabel-text-size:var(
+--spectrum-fieldlabel-m-text-size,var(--spectrum-global-dimension-font-size-75)
+);--spectrum-fieldlabel-asterisk-gap:var(
+--spectrum-fieldlabel-m-asterisk-gap,var(--spectrum-global-dimension-size-25)
+);--spectrum-fieldlabel-asterisk-margin-y:var(
+--spectrum-fieldlabel-m-asterisk-margin-y,var(--spectrum-global-dimension-size-50)
+);--spectrum-fieldlabel-padding-top:var(
+--spectrum-fieldlabel-m-padding-top,var(--spectrum-global-dimension-size-50)
+);--spectrum-fieldlabel-padding-bottom:var(
+--spectrum-fieldlabel-m-padding-bottom,var(--spectrum-global-dimension-size-65)
+)}:host([size=l]){--spectrum-fieldlabel-text-font-weight:var(
+--spectrum-fieldlabel-l-text-font-weight,var(--spectrum-alias-body-text-font-weight)
+);--spectrum-fieldlabel-text-line-height:var(
+--spectrum-fieldlabel-l-text-line-height,var(--spectrum-alias-component-text-line-height)
+);--spectrum-fieldlabel-text-size:var(
+--spectrum-fieldlabel-l-text-size,var(--spectrum-global-dimension-font-size-100)
+);--spectrum-fieldlabel-asterisk-gap:var(
+--spectrum-fieldlabel-l-asterisk-gap,var(--spectrum-global-dimension-size-25)
+);--spectrum-fieldlabel-asterisk-margin-y:var(
+--spectrum-fieldlabel-l-asterisk-margin-y,var(--spectrum-global-dimension-size-50)
+);--spectrum-fieldlabel-padding-top:var(
+--spectrum-fieldlabel-l-padding-top,var(--spectrum-global-dimension-size-75)
+);--spectrum-fieldlabel-padding-bottom:var(
+--spectrum-fieldlabel-l-padding-bottom,var(--spectrum-global-dimension-size-115)
+)}:host([size=xl]){--spectrum-fieldlabel-text-font-weight:var(
+--spectrum-fieldlabel-xl-text-font-weight,var(--spectrum-alias-body-text-font-weight)
+);--spectrum-fieldlabel-text-line-height:var(
+--spectrum-fieldlabel-xl-text-line-height,var(--spectrum-alias-component-text-line-height)
+);--spectrum-fieldlabel-text-size:var(
+--spectrum-fieldlabel-xl-text-size,var(--spectrum-global-dimension-font-size-200)
+);--spectrum-fieldlabel-asterisk-gap:var(
+--spectrum-fieldlabel-xl-asterisk-gap,var(--spectrum-global-dimension-size-25)
+);--spectrum-fieldlabel-asterisk-margin-y:var(
+--spectrum-fieldlabel-xl-asterisk-margin-y,var(--spectrum-global-dimension-size-50)
+);--spectrum-fieldlabel-padding-top:var(
+--spectrum-fieldlabel-xl-padding-top,var(--spectrum-global-dimension-size-115)
+);--spectrum-fieldlabel-padding-bottom:var(
+--spectrum-fieldlabel-xl-padding-bottom,var(--spectrum-global-dimension-size-130)
+)}:host{-webkit-font-smoothing:subpixel-antialiased;-moz-osx-font-smoothing:auto;font-smoothing:subpixel-antialiased;box-sizing:border-box;display:block;font-size:var(--spectrum-fieldlabel-text-size);font-weight:var(--spectrum-fieldlabel-text-font-weight);line-height:var(--spectrum-fieldlabel-text-line-height);padding-bottom:var(--spectrum-fieldlabel-padding-bottom);padding-left:0;padding-right:0;padding-top:var(--spectrum-fieldlabel-padding-top);vertical-align:top}:host([dir=ltr]) .requiredIcon{margin-left:var(
+--spectrum-fieldlabel-asterisk-gap
+);margin-right:0}:host([dir=rtl]) .requiredIcon{margin-left:0;margin-right:var(
+--spectrum-fieldlabel-asterisk-gap
+)}.requiredIcon{margin-bottom:0;margin-top:var(
+--spectrum-fieldlabel-asterisk-margin-y
+)}:host([dir=ltr][side-aligned=start]){padding-left:0;padding-right:var(
+--spectrum-fieldlabel-side-m-padding-right,var(--spectrum-global-dimension-size-150)
+)}:host([dir=rtl][side-aligned=start]){padding-left:var(
+--spectrum-fieldlabel-side-m-padding-right,var(--spectrum-global-dimension-size-150)
+);padding-right:0}:host([side-aligned=start]){display:inline-block;padding-bottom:0;padding-top:var(
+--spectrum-fieldlabel-side-m-padding-top,var(--spectrum-global-dimension-size-100)
+)}:host([dir=ltr][side-aligned=start]) .requiredIcon{margin-left:var(
+--spectrum-fieldlabel-asterisk-gap
+);margin-right:0}:host([dir=rtl][side-aligned=start]) .requiredIcon{margin-left:0;margin-right:var(
+--spectrum-fieldlabel-asterisk-gap
+)}:host([side-aligned=start]) .requiredIcon{margin-bottom:0;margin-top:var(
+--spectrum-fieldlabel-side-m-asterisk-margin-y,var(--spectrum-global-dimension-size-50)
+)}:host([dir=ltr][side-aligned=end]){text-align:right}:host([dir=rtl][side-aligned=end]){text-align:left}:host([dir=ltr][side-aligned=end]){padding-left:0;padding-right:var(
+--spectrum-fieldlabel-side-m-padding-right,var(--spectrum-global-dimension-size-150)
+)}:host([dir=rtl][side-aligned=end]){padding-left:var(
+--spectrum-fieldlabel-side-m-padding-right,var(--spectrum-global-dimension-size-150)
+);padding-right:0}:host([side-aligned=end]){display:inline-block;padding-bottom:0;padding-top:var(
+--spectrum-fieldlabel-side-m-padding-top,var(--spectrum-global-dimension-size-100)
+)}:host{color:var(
+--spectrum-fieldlabel-m-text-color,var(--spectrum-alias-label-text-color)
+)}:host([disabled]){color:var(
+--spectrum-fieldlabel-m-text-color-disabled,var(--spectrum-alias-text-color-disabled)
+)}:host([disabled]) .requiredIcon{color:var(
+--spectrum-fieldlabel-m-asterisk-color-disabled,var(--spectrum-alias-text-color-disabled)
+)}.requiredIcon{color:var(
+--spectrum-fieldlabel-m-asterisk-color,var(--spectrum-global-color-gray-600)
+)}
+`;class v extends(n(o.a)){constructor(){super(...arguments),this.disabled=!1,this.id="",this.for="",this.required=!1}static get styles(){return[f,b]}handleClick(e){if(!this.target||this.disabled||e.defaultPrevented)return;this.target.focus();const t=this.getRootNode(),r=this.target,s=r.getRootNode(),i=s.host;s===t&&r.forceFocusVisible?r.forceFocusVisible():i&&i.forceFocusVisible&&i.forceFocusVisible()}async manageFor(){if(!this.for)return;const e=this.getRootNode(),t=e.querySelector(`#${this.for}`);if(t){if(t.localName.search("-")>0&&await customElements.whenDefined(t.localName),void 0!==t.updateComplete&&await t.updateComplete,this.target=t.focusElement||t,this.target){this.target.getRootNode()===e?this.target.setAttribute("aria-labelledby",this.id):this.target.setAttribute("aria-label",this.labelText)}return Promise.resolve()}}get labelText(){const e=this.slotEl.assignedNodes({flatten:!0});return e.length?e.map(e=>(e.textContent||"").trim()).join(" "):""}render(){return a.c`
+            <label>
+                <slot @slotchange=${this.manageFor}></slot>
+                ${this.required?a.c`
+                          <sp-icon-asterisk100
+                              class="requiredIcon spectrum-UIIcon-Asterisk100"
+                          ></sp-icon-asterisk100>
+                      `:a.c``}
+            </label>
+        `}firstUpdated(e){super.firstUpdated(e),this.hasAttribute("id")||this.setAttribute("id",`${this.tagName.toLowerCase()}-${v.instanceCount++}`),this.addEventListener("click",this.handleClick)}updated(e){super.updated(e),(e.has("for")||e.has("id"))&&this.manageFor()}}v.instanceCount=0,l([Object(a.d)({type:Boolean,reflect:!0})],v.prototype,"disabled",void 0),l([Object(a.d)({type:String})],v.prototype,"id",void 0),l([Object(a.d)({type:String})],v.prototype,"for",void 0),l([Object(a.d)({type:Boolean,reflect:!0})],v.prototype,"required",void 0),l([Object(a.e)("slot")],v.prototype,"slotEl",void 0),l([Object(a.d)({type:String,reflect:!0,attribute:"side-aligned"})],v.prototype,"sideAligned",void 0),customElements.get("sp-field-label")&&console.warn("sp-field-label already defined!"),!customElements.get("sp-field-label")&&customElements.define("sp-field-label",v);var y=a.b`
+:host([size=s]){--spectrum-progressbar-border-radius:var(
+--spectrum-progressbar-s-border-radius
+);--spectrum-progressbar-label-gap-y:var(
+--spectrum-progressbar-s-label-gap-y,var(--spectrum-global-dimension-size-50)
+);--spectrum-progressbar-height:var(
+--spectrum-progressbar-s-height,var(--spectrum-global-dimension-size-50)
+);--spectrum-progressbar-width:var(
+--spectrum-progressbar-s-width,var(--spectrum-global-dimension-static-size-2400)
+);--spectrum-progressbar-indeterminate-fill-width:var(
+--spectrum-progressbar-s-indeterminate-fill-width,var(--spectrum-global-dimension-size-1700)
+);--spectrum-progressbar-indeterminate-duration:var(
+--spectrum-progressbar-s-indeterminate-duration,var(--spectrum-global-animation-duration-2000)
+);--spectrum-fieldlabel-side-padding-right:var(
+--spectrum-fieldlabel-side-s-padding-right,var(--spectrum-global-dimension-size-130)
+)}:host([size=m]){--spectrum-progressbar-border-radius:var(
+--spectrum-progressbar-m-border-radius
+);--spectrum-progressbar-label-gap-y:var(
+--spectrum-progressbar-m-label-gap-y,var(--spectrum-global-dimension-size-50)
+);--spectrum-progressbar-height:var(
+--spectrum-progressbar-m-height,var(--spectrum-global-dimension-size-75)
+);--spectrum-progressbar-width:var(
+--spectrum-progressbar-m-width,var(--spectrum-global-dimension-static-size-2400)
+);--spectrum-progressbar-indeterminate-fill-width:var(
+--spectrum-progressbar-m-indeterminate-fill-width,var(--spectrum-global-dimension-size-1700)
+);--spectrum-progressbar-indeterminate-duration:var(
+--spectrum-progressbar-m-indeterminate-duration,var(--spectrum-global-animation-duration-2000)
+);--spectrum-fieldlabel-side-padding-right:var(
+--spectrum-fieldlabel-side-m-padding-right,var(--spectrum-global-dimension-size-150)
+)}:host([size=l]){--spectrum-progressbar-label-gap-y:var(
+--spectrum-progressbar-l-label-gap-y,var(--spectrum-global-dimension-size-50)
+);--spectrum-progressbar-height:var(
+--spectrum-progressbar-l-height,var(--spectrum-global-dimension-size-100)
+);--spectrum-progressbar-border-radius:var(
+--spectrum-progressbar-l-border-radius,var(--spectrum-global-dimension-size-50)
+);--spectrum-progressbar-width:var(
+--spectrum-progressbar-l-width,var(--spectrum-global-dimension-static-size-2500)
+);--spectrum-progressbar-indeterminate-fill-width:var(
+--spectrum-progressbar-l-indeterminate-fill-width,var(--spectrum-global-dimension-size-1800)
+);--spectrum-progressbar-indeterminate-duration:var(
+--spectrum-progressbar-l-indeterminate-duration,var(--spectrum-global-animation-duration-2000)
+);--spectrum-fieldlabel-side-padding-right:var(
+--spectrum-fieldlabel-side-l-padding-right,var(--spectrum-global-dimension-size-175)
+)}:host([size=xl]){--spectrum-progressbar-border-radius:var(
+--spectrum-progressbar-xl-border-radius
+);--spectrum-progressbar-label-gap-y:var(
+--spectrum-progressbar-xl-label-gap-y,var(--spectrum-global-dimension-size-50)
+);--spectrum-progressbar-height:var(
+--spectrum-progressbar-xl-height,var(--spectrum-global-dimension-size-125)
+);--spectrum-progressbar-width:var(
+--spectrum-progressbar-xl-width,var(--spectrum-global-dimension-static-size-2800)
+);--spectrum-progressbar-indeterminate-fill-width:var(
+--spectrum-progressbar-xl-indeterminate-fill-width,var(--spectrum-global-dimension-size-2000)
+);--spectrum-progressbar-indeterminate-duration:var(
+--spectrum-progressbar-xl-indeterminate-duration,var(--spectrum-global-animation-duration-2000)
+);--spectrum-fieldlabel-side-padding-right:var(
+--spectrum-fieldlabel-side-xl-padding-right,var(--spectrum-global-dimension-size-185)
+)}:host{align-items:center;display:inline-flex;flex-flow:row wrap;justify-content:space-between;position:relative;vertical-align:top;width:var(--spectrum-progressbar-width)}.track{border-radius:var(--spectrum-progressbar-border-radius);overflow:hidden;width:100%;z-index:1}.fill,.track{height:var(--spectrum-progressbar-height)}.fill{border:none;transition:width 1s}:host([dir=ltr]) .label,:host([dir=ltr]) .percentage{text-align:left}:host([dir=rtl]) .label,:host([dir=rtl]) .percentage{text-align:right}.label,.percentage{margin-bottom:var(
+--spectrum-progressbar-label-gap-y
+)}.label{flex:1 1 0%}:host([dir=ltr]) .percentage{margin-left:var(
+--spectrum-fieldlabel-side-padding-right
+)}:host([dir=rtl]) .percentage{margin-right:var(
+--spectrum-fieldlabel-side-padding-right
+)}.percentage{align-self:flex-start}:host([side-label]){display:inline-flex;flex-flow:row;justify-content:space-between;width:auto}:host([side-label]) .track{flex:1 1 var(--spectrum-progressbar-width);min-width:var(
+--spectrum-progressbar-width
+)}:host([dir=ltr][side-label]) .label{margin-right:var(
+--spectrum-fieldlabel-side-padding-right
+)}:host([dir=rtl][side-label]) .label{margin-left:var(
+--spectrum-fieldlabel-side-padding-right
+)}:host([side-label]) .label{flex-grow:0;margin-bottom:0}:host([dir=ltr][side-label]) .percentage{text-align:right}:host([dir=rtl][side-label]) .percentage{text-align:left}:host([dir=ltr][side-label]) .percentage{margin-left:var(
+--spectrum-fieldlabel-side-padding-right
+)}:host([dir=rtl][side-label]) .percentage{margin-right:var(
+--spectrum-fieldlabel-side-padding-right
+)}:host([side-label]) .percentage{margin-bottom:0;order:3}:host([indeterminate]) .fill{animation-timing-function:var(
+--spectrum-progressbar-indeterminate-animation-ease
+);position:relative;width:var(
+--spectrum-progressbar-indeterminate-fill-width
+);will-change:transform}:host([dir=ltr][indeterminate]) .fill{animation:indeterminate-loop-ltr var(--spectrum-progressbar-indeterminate-duration) infinite}:host([dir=rtl][indeterminate]) .fill{animation:indeterminate-loop-rtl var(--spectrum-progressbar-indeterminate-duration) infinite}@keyframes indeterminate-loop-ltr{0%{transform:translate(calc(-1*var(--spectrum-progressbar-indeterminate-fill-width)))}to{transform:translate(var(--spectrum-progressbar-width))}}@keyframes indeterminate-loop-rtl{0%{transform:translate(var(--spectrum-progressbar-width))}to{transform:translate(calc(-1*var(--spectrum-progressbar-width)))}}.fill{background:var(
+--spectrum-progressbar-m-track-fill-color,var(--spectrum-global-color-blue-500)
+)}.track{background-color:var(
+--spectrum-progressbar-m-track-color,var(--spectrum-alias-track-color-default)
+)}:host([over-background]) .fill{background:var(
+--spectrum-progressbar-m-over-background-track-fill-color,var(--spectrum-global-color-static-white)
+)}:host([over-background]) .label,:host([over-background]) .percentage{color:var(
+--spectrum-progressbar-m-over-background-track-fill-color,var(--spectrum-global-color-static-white)
+)}:host([over-background]) .track{background-color:var(
+--spectrum-progressbar-m-over-background-track-color,var(--spectrum-alias-track-color-over-background)
+)}:host([positive]) .fill{background:var(
+--spectrum-meter-positive-m-track-fill-color,var(--spectrum-semantic-positive-color-status)
+)}:host(.is-notice) .fill{background:var(
+--spectrum-meter-notice-m-track-fill-color,var(--spectrum-semantic-notice-color-status)
+)}:host(.is-negative) .fill{background:var(
+--spectrum-meter-negative-m-track-fill-color,var(--spectrum-semantic-negative-color-status)
+)}.label,.percentage{color:var(
+--spectrum-fieldlabel-m-text-color,var(--spectrum-alias-label-text-color)
+)}.fill{transform-origin:left;width:100%}:host([dir=rtl]) .fill{transform-origin:right}
+`;class w extends(n(o.a)){constructor(){super(...arguments),this.indeterminate=!1,this.label="",this.overBackground=!1,this.sideLabel=!1,this.progress=0}static get styles(){return[y]}render(){return a.c`
+            ${this.label?a.c`
+                      <sp-field-label size=${this.size} class="label">
+                          ${this.label}
+                      </sp-field-label>
+                      ${this.indeterminate?a.c``:a.c`
+                                <sp-field-label
+                                    size=${this.size}
+                                    class="percentage"
+                                >
+                                    ${this.progress}%
+                                </sp-field-label>
+                            `}
+                  `:a.c``}
+            <div class="track">
+                <div
+                    class="fill"
+                    style="transform: scaleX(calc(${this.progress} / 100));"
+                ></div>
+            </div>
+        `}firstUpdated(e){super.firstUpdated(e),this.hasAttribute("role")||this.setAttribute("role","progressbar")}updated(e){super.updated(e),e.has("indeterminate")&&(this.indeterminate?(this.removeAttribute("aria-valuemin"),this.removeAttribute("aria-valuemax")):(this.setAttribute("aria-valuemin","0"),this.setAttribute("aria-valuemax","100"))),!this.indeterminate&&e.has("progress")?this.setAttribute("aria-valuenow",""+this.progress):this.hasAttribute("aria-valuenow")&&this.removeAttribute("aria-valuenow"),this.label&&e.has("label")&&this.setAttribute("aria-label",this.label)}}s([Object(a.d)({type:Boolean,reflect:!0})],w.prototype,"indeterminate",void 0),s([Object(a.d)({type:String})],w.prototype,"label",void 0),s([Object(a.d)({type:Boolean,reflect:!0,attribute:"over-background"})],w.prototype,"overBackground",void 0),s([Object(a.d)({type:Boolean,reflect:!0,attribute:"side-label"})],w.prototype,"sideLabel",void 0),s([Object(a.d)({type:Number})],w.prototype,"progress",void 0)},1571:function(e,t,r){"use strict";r.d(t,"a",(function(){return s})),r.d(t,"c",(function(){return i})),r.d(t,"b",(function(){return a}));
+/**
+ * @license
+ * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
+ * This code may only be used under the BSD style license found at
+ * http://polymer.github.io/LICENSE.txt
+ * The complete set of authors may be found at
+ * http://polymer.github.io/AUTHORS.txt
+ * The complete set of contributors may be found at
+ * http://polymer.github.io/CONTRIBUTORS.txt
+ * Code distributed by Google as part of the polymer project is also
+ * subject to an additional IP rights grant found at
+ * http://polymer.github.io/PATENTS.txt
+ */
+const s="undefined"!=typeof window&&null!=window.customElements&&void 0!==window.customElements.polyfillWrapFlushCallback,i=(e,t,r=null,s=null)=>{for(;t!==r;){const r=t.nextSibling;e.insertBefore(t,s),t=r}},a=(e,t,r=null)=>{for(;t!==r;){const r=t.nextSibling;e.removeChild(t),t=r}}},1975:function(e,t,r){"use strict";r.d(t,"b",(function(){return o})),r.d(t,"a",(function(){return l}));var s=r(1571),i=r(1291);
+/**
+ * @license
+ * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
+ * This code may only be used under the BSD style license found at
+ * http://polymer.github.io/LICENSE.txt
+ * The complete set of authors may be found at
+ * http://polymer.github.io/AUTHORS.txt
+ * The complete set of contributors may be found at
+ * http://polymer.github.io/CONTRIBUTORS.txt
+ * Code distributed by Google as part of the polymer project is also
+ * subject to an additional IP rights grant found at
+ * http://polymer.github.io/PATENTS.txt
+ */
+const a=window.trustedTypes&&trustedTypes.createPolicy("lit-html",{createHTML:e=>e}),n=` ${i.f} `;class o{constructor(e,t,r,s){this.strings=e,this.values=t,this.type=r,this.processor=s}getHTML(){const e=this.strings.length-1;let t="",r=!1;for(let s=0;s<e;s++){const e=this.strings[s],a=e.lastIndexOf("\x3c!--");r=(a>-1||r)&&-1===e.indexOf("--\x3e",a+1);const o=i.e.exec(e);t+=null===o?e+(r?n:i.g):e.substr(0,o.index)+o[1]+o[2]+i.b+o[3]+i.f}return t+=this.strings[e],t}getTemplateElement(){const e=document.createElement("template");let t=this.getHTML();return void 0!==a&&(t=a.createHTML(t)),e.innerHTML=t,e}}class l extends o{getHTML(){return`<svg>${super.getHTML()}</svg>`}getTemplateElement(){const e=super.getTemplateElement(),t=e.content,r=t.firstChild;return t.removeChild(r),Object(s.c)(t,r.firstChild),e}}},1976:function(e,t,r){"use strict";r.d(t,"b",(function(){return i})),r.d(t,"a",(function(){return a}));var s=r(1291);
+/**
+ * @license
+ * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
+ * This code may only be used under the BSD style license found at
+ * http://polymer.github.io/LICENSE.txt
+ * The complete set of authors may be found at
+ * http://polymer.github.io/AUTHORS.txt
+ * The complete set of contributors may be found at
+ * http://polymer.github.io/CONTRIBUTORS.txt
+ * Code distributed by Google as part of the polymer project is also
+ * subject to an additional IP rights grant found at
+ * http://polymer.github.io/PATENTS.txt
+ */function i(e){let t=a.get(e.type);void 0===t&&(t={stringsArray:new WeakMap,keyString:new Map},a.set(e.type,t));let r=t.stringsArray.get(e.strings);if(void 0!==r)return r;const i=e.strings.join(s.f);return r=t.keyString.get(i),void 0===r&&(r=new s.a(e,e.getTemplateElement()),t.keyString.set(i,r)),t.stringsArray.set(e.strings,r),r}const a=new Map},2378:function(e,t,r){"use strict";r.d(t,"a",(function(){return n})),r.d(t,"b",(function(){return o}));var s=r(1571),i=r(912),a=r(1976);
+/**
+ * @license
+ * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
+ * This code may only be used under the BSD style license found at
+ * http://polymer.github.io/LICENSE.txt
+ * The complete set of authors may be found at
+ * http://polymer.github.io/AUTHORS.txt
+ * The complete set of contributors may be found at
+ * http://polymer.github.io/CONTRIBUTORS.txt
+ * Code distributed by Google as part of the polymer project is also
+ * subject to an additional IP rights grant found at
+ * http://polymer.github.io/PATENTS.txt
+ */
+const n=new WeakMap,o=(e,t,r)=>{let o=n.get(t);void 0===o&&(Object(s.b)(t,t.firstChild),n.set(t,o=new i.e(Object.assign({templateFactory:a.b},r))),o.appendInto(t)),o.setValue(e),o.commit()}},2379:function(e,t,r){"use strict";r.d(t,"a",(function(){return i})),r.d(t,"b",(function(){return a}));
+/**
+ * @license
+ * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
+ * This code may only be used under the BSD style license found at
+ * http://polymer.github.io/LICENSE.txt
+ * The complete set of authors may be found at
+ * http://polymer.github.io/AUTHORS.txt
+ * The complete set of contributors may be found at
+ * http://polymer.github.io/CONTRIBUTORS.txt
+ * Code distributed by Google as part of the polymer project is also
+ * subject to an additional IP rights grant found at
+ * http://polymer.github.io/PATENTS.txt
+ */
+const s=new WeakMap,i=e=>(...t)=>{const r=e(...t);return s.set(r,!0),r},a=e=>"function"==typeof e&&s.has(e)},2380:function(e,t,r){"use strict";r.d(t,"a",(function(){return s})),r.d(t,"b",(function(){return i}));
+/**
+ * @license
+ * Copyright (c) 2018 The Polymer Project Authors. All rights reserved.
+ * This code may only be used under the BSD style license found at
+ * http://polymer.github.io/LICENSE.txt
+ * The complete set of authors may be found at
+ * http://polymer.github.io/AUTHORS.txt
+ * The complete set of contributors may be found at
+ * http://polymer.github.io/CONTRIBUTORS.txt
+ * Code distributed by Google as part of the polymer project is also
+ * subject to an additional IP rights grant found at
+ * http://polymer.github.io/PATENTS.txt
+ */
+const s={},i={}},2381:function(e,t,r){"use strict";r.d(t,"a",(function(){return a}));var s=r(1571),i=r(1291);
+/**
+ * @license
+ * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
+ * This code may only be used under the BSD style license found at
+ * http://polymer.github.io/LICENSE.txt
+ * The complete set of authors may be found at
+ * http://polymer.github.io/AUTHORS.txt
+ * The complete set of contributors may be found at
+ * http://polymer.github.io/CONTRIBUTORS.txt
+ * Code distributed by Google as part of the polymer project is also
+ * subject to an additional IP rights grant found at
+ * http://polymer.github.io/PATENTS.txt
+ */
+class a{constructor(e,t,r){this.__parts=[],this.template=e,this.processor=t,this.options=r}update(e){let t=0;for(const r of this.__parts)void 0!==r&&r.setValue(e[t]),t++;for(const r of this.__parts)void 0!==r&&r.commit()}_clone(){const e=s.a?this.template.element.content.cloneNode(!0):document.importNode(this.template.element.content,!0),t=[],r=this.template.parts,a=document.createTreeWalker(e,133,null,!1);let n,o=0,l=0,c=a.nextNode();for(;o<r.length;)if(n=r[o],Object(i.d)(n)){for(;l<n.index;)l++,"TEMPLATE"===c.nodeName&&(t.push(c),a.currentNode=c.content),null===(c=a.nextNode())&&(a.currentNode=t.pop(),c=a.nextNode());if("node"===n.type){const e=this.processor.handleTextExpression(this.options);e.insertAfterNode(c.previousSibling),this.__parts.push(e)}else this.__parts.push(...this.processor.handleAttributeExpressions(c,n.name,n.strings,this.options));o++}else this.__parts.push(void 0),o++;return s.a&&(document.adoptNode(e),customElements.upgrade(e)),e}}},2832:function(e,t,r){"use strict";r.d(t,"a",(function(){return s}));function s(e,t,r,s){var i,a=arguments.length,n=a<3?t:null===s?s=Object.getOwnPropertyDescriptor(t,r):s;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)n=Reflect.decorate(e,t,r,s);else for(var o=e.length-1;o>=0;o--)(i=e[o])&&(n=(a<3?i(n):a>3?i(t,r,n):i(t,r))||n);return a>3&&n&&Object.defineProperty(t,r,n),n}Object.create;Object.create},4395:function(e,t,r){"use strict";r.d(t,"a",(function(){return o}));var s=r(2832),i=r(801);const a=new Set;new MutationObserver(()=>{const e="rtl"===document.documentElement.dir?document.documentElement.dir:"ltr";a.forEach(t=>{t.setAttribute("dir",e)})}).observe(document.documentElement,{attributes:!0,attributeFilter:["dir"]});const n=e=>void 0!==e.startManagingContentDirection||"SP-THEME"===e.tagName;class o extends(function(e){class t extends e{constructor(){super(...arguments),this.dir="ltr"}get isLTR(){return"ltr"===this.dir}connectedCallback(){if(!this.hasAttribute("dir")){let e=this.assignedSlot||this.parentNode;for(;e!==document.documentElement&&!n(e);)e=e.assignedSlot||e.parentNode||e.host;if(this.dir="rtl"===e.dir?e.dir:this.dir||"ltr",e===document.documentElement)a.add(this);else{const{localName:t}=e;t.search("-")>-1&&!customElements.get(t)?customElements.whenDefined(t).then(()=>{e.startManagingContentDirection(this)}):e.startManagingContentDirection(this)}this._dirParent=e}super.connectedCallback()}disconnectedCallback(){super.disconnectedCallback(),this._dirParent&&(this._dirParent===document.documentElement?a.delete(this):this._dirParent.stopManagingContentDirection(this),this.removeAttribute("dir"))}}return Object(s.a)([Object(i.d)({reflect:!0})],t.prototype,"dir",void 0),t}(i.a)){}},801:function(e,t,r){"use strict";r.d(t,"d",(function(){return A})),r.d(t,"e",(function(){return j})),r.d(t,"c",(function(){return u.f})),r.d(t,"f",(function(){return u.i})),r.d(t,"b",(function(){return q})),r.d(t,"a",(function(){return $}));var s=r(1571),i=r(1291);
+/**
+ * @license
+ * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
+ * This code may only be used under the BSD style license found at
+ * http://polymer.github.io/LICENSE.txt
+ * The complete set of authors may be found at
+ * http://polymer.github.io/AUTHORS.txt
+ * The complete set of contributors may be found at
+ * http://polymer.github.io/CONTRIBUTORS.txt
+ * Code distributed by Google as part of the polymer project is also
+ * subject to an additional IP rights grant found at
+ * http://polymer.github.io/PATENTS.txt
+ */
+const a=133;function n(e,t){const{element:{content:r},parts:s}=e,i=document.createTreeWalker(r,a,null,!1);let n=l(s),o=s[n],c=-1,d=0;const p=[];let u=null;for(;i.nextNode();){c++;const e=i.currentNode;for(e.previousSibling===u&&(u=null),t.has(e)&&(p.push(e),null===u&&(u=e)),null!==u&&d++;void 0!==o&&o.index===c;)o.index=null!==u?-1:o.index-d,n=l(s,n),o=s[n]}p.forEach(e=>e.parentNode.removeChild(e))}const o=e=>{let t=11===e.nodeType?0:1;const r=document.createTreeWalker(e,a,null,!1);for(;r.nextNode();)t++;return t},l=(e,t=-1)=>{for(let r=t+1;r<e.length;r++){const t=e[r];if(Object(i.d)(t))return r}return-1};var c=r(2378),d=r(1976),p=r(2381),u=r(818);
+/**
+ * @license
+ * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
+ * This code may only be used under the BSD style license found at
+ * http://polymer.github.io/LICENSE.txt
+ * The complete set of authors may be found at
+ * http://polymer.github.io/AUTHORS.txt
+ * The complete set of contributors may be found at
+ * http://polymer.github.io/CONTRIBUTORS.txt
+ * Code distributed by Google as part of the polymer project is also
+ * subject to an additional IP rights grant found at
+ * http://polymer.github.io/PATENTS.txt
+ */
+const h=(e,t)=>`${e}--${t}`;let m=!0;void 0===window.ShadyCSS?m=!1:void 0===window.ShadyCSS.prepareTemplateDom&&(console.warn("Incompatible ShadyCSS version detected. Please update to at least @webcomponents/webcomponentsjs@2.0.2 and @webcomponents/shadycss@1.3.1."),m=!1);const g=e=>t=>{const r=h(t.type,e);let s=d.a.get(r);void 0===s&&(s={stringsArray:new WeakMap,keyString:new Map},d.a.set(r,s));let a=s.stringsArray.get(t.strings);if(void 0!==a)return a;const n=t.strings.join(i.f);if(a=s.keyString.get(n),void 0===a){const r=t.getTemplateElement();m&&window.ShadyCSS.prepareTemplateDom(r,e),a=new i.a(t,r),s.keyString.set(n,a)}return s.stringsArray.set(t.strings,a),a},b=["html","svg"],f=new Set,v=(e,t,r)=>{f.add(e);const s=r?r.element:document.createElement("template"),i=t.querySelectorAll("style"),{length:c}=i;if(0===c)return void window.ShadyCSS.prepareTemplateStyles(s,e);const p=document.createElement("style");for(let a=0;a<c;a++){const e=i[a];e.parentNode.removeChild(e),p.textContent+=e.textContent}(e=>{b.forEach(t=>{const r=d.a.get(h(t,e));void 0!==r&&r.keyString.forEach(e=>{const{element:{content:t}}=e,r=new Set;Array.from(t.querySelectorAll("style")).forEach(e=>{r.add(e)}),n(e,r)})})})(e);const u=s.content;r?function(e,t,r=null){const{element:{content:s},parts:i}=e;if(null==r)return void s.appendChild(t);const n=document.createTreeWalker(s,a,null,!1);let c=l(i),d=0,p=-1;for(;n.nextNode();){for(p++,n.currentNode===r&&(d=o(t),r.parentNode.insertBefore(t,r));-1!==c&&i[c].index===p;){if(d>0){for(;-1!==c;)i[c].index+=d,c=l(i,c);return}c=l(i,c)}}}(r,p,u.firstChild):u.insertBefore(p,u.firstChild),window.ShadyCSS.prepareTemplateStyles(s,e);const m=u.querySelector("style");if(window.ShadyCSS.nativeShadow&&null!==m)t.insertBefore(m.cloneNode(!0),t.firstChild);else if(r){u.insertBefore(p,u.firstChild);const e=new Set;e.add(p),n(r,e)}};window.JSCompiler_renameProperty=(e,t)=>e;const y={toAttribute(e,t){switch(t){case Boolean:return e?"":null;case Object:case Array:return null==e?e:JSON.stringify(e)}return e},fromAttribute(e,t){switch(t){case Boolean:return null!==e;case Number:return null===e?null:Number(e);case Object:case Array:return JSON.parse(e)}return e}},w=(e,t)=>t!==e&&(t==t||e==e),_={attribute:!0,type:String,converter:y,reflect:!1,hasChanged:w},x=1,S=4,z=8,k=16,P="finalized";class C extends HTMLElement{constructor(){super(),this.initialize()}static get observedAttributes(){this.finalize();const e=[];return this._classProperties.forEach((t,r)=>{const s=this._attributeNameForProperty(r,t);void 0!==s&&(this._attributeToPropertyMap.set(s,r),e.push(s))}),e}static _ensureClassProperties(){if(!this.hasOwnProperty(JSCompiler_renameProperty("_classProperties",this))){this._classProperties=new Map;const e=Object.getPrototypeOf(this)._classProperties;void 0!==e&&e.forEach((e,t)=>this._classProperties.set(t,e))}}static createProperty(e,t=_){if(this._ensureClassProperties(),this._classProperties.set(e,t),t.noAccessor||this.prototype.hasOwnProperty(e))return;const r="symbol"==typeof e?Symbol():`__${e}`,s=this.getPropertyDescriptor(e,r,t);void 0!==s&&Object.defineProperty(this.prototype,e,s)}static getPropertyDescriptor(e,t,r){return{get(){return this[t]},set(s){const i=this[e];this[t]=s,this.requestUpdateInternal(e,i,r)},configurable:!0,enumerable:!0}}static getPropertyOptions(e){return this._classProperties&&this._classProperties.get(e)||_}static finalize(){const e=Object.getPrototypeOf(this);if(e.hasOwnProperty(P)||e.finalize(),this[P]=!0,this._ensureClassProperties(),this._attributeToPropertyMap=new Map,this.hasOwnProperty(JSCompiler_renameProperty("properties",this))){const e=this.properties,t=[...Object.getOwnPropertyNames(e),..."function"==typeof Object.getOwnPropertySymbols?Object.getOwnPropertySymbols(e):[]];for(const r of t)this.createProperty(r,e[r])}}static _attributeNameForProperty(e,t){const r=t.attribute;return!1===r?void 0:"string"==typeof r?r:"string"==typeof e?e.toLowerCase():void 0}static _valueHasChanged(e,t,r=w){return r(e,t)}static _propertyValueFromAttribute(e,t){const r=t.type,s=t.converter||y,i="function"==typeof s?s:s.fromAttribute;return i?i(e,r):e}static _propertyValueToAttribute(e,t){if(void 0===t.reflect)return;const r=t.type,s=t.converter;return(s&&s.toAttribute||y.toAttribute)(e,r)}initialize(){this._updateState=0,this._updatePromise=new Promise(e=>this._enableUpdatingResolver=e),this._changedProperties=new Map,this._saveInstanceProperties(),this.requestUpdateInternal()}_saveInstanceProperties(){this.constructor._classProperties.forEach((e,t)=>{if(this.hasOwnProperty(t)){const e=this[t];delete this[t],this._instanceProperties||(this._instanceProperties=new Map),this._instanceProperties.set(t,e)}})}_applyInstanceProperties(){this._instanceProperties.forEach((e,t)=>this[t]=e),this._instanceProperties=void 0}connectedCallback(){this.enableUpdating()}enableUpdating(){void 0!==this._enableUpdatingResolver&&(this._enableUpdatingResolver(),this._enableUpdatingResolver=void 0)}disconnectedCallback(){}attributeChangedCallback(e,t,r){t!==r&&this._attributeToProperty(e,r)}_propertyToAttribute(e,t,r=_){const s=this.constructor,i=s._attributeNameForProperty(e,r);if(void 0!==i){const e=s._propertyValueToAttribute(t,r);if(void 0===e)return;this._updateState=this._updateState|z,null==e?this.removeAttribute(i):this.setAttribute(i,e),this._updateState=this._updateState&~z}}_attributeToProperty(e,t){if(this._updateState&z)return;const r=this.constructor,s=r._attributeToPropertyMap.get(e);if(void 0!==s){const e=r.getPropertyOptions(s);this._updateState=this._updateState|k,this[s]=r._propertyValueFromAttribute(t,e),this._updateState=this._updateState&~k}}requestUpdateInternal(e,t,r){let s=!0;if(void 0!==e){const i=this.constructor;r=r||i.getPropertyOptions(e),i._valueHasChanged(this[e],t,r.hasChanged)?(this._changedProperties.has(e)||this._changedProperties.set(e,t),!0!==r.reflect||this._updateState&k||(void 0===this._reflectingProperties&&(this._reflectingProperties=new Map),this._reflectingProperties.set(e,r))):s=!1}!this._hasRequestedUpdate&&s&&(this._updatePromise=this._enqueueUpdate())}requestUpdate(e,t){return this.requestUpdateInternal(e,t),this.updateComplete}async _enqueueUpdate(){this._updateState=this._updateState|S;try{await this._updatePromise}catch(t){}const e=this.performUpdate();return null!=e&&await e,!this._hasRequestedUpdate}get _hasRequestedUpdate(){return this._updateState&S}get hasUpdated(){return this._updateState&x}performUpdate(){if(!this._hasRequestedUpdate)return;this._instanceProperties&&this._applyInstanceProperties();let e=!1;const t=this._changedProperties;try{e=this.shouldUpdate(t),e?this.update(t):this._markUpdated()}catch(r){throw e=!1,this._markUpdated(),r}e&&(this._updateState&x||(this._updateState=this._updateState|x,this.firstUpdated(t)),this.updated(t))}_markUpdated(){this._changedProperties=new Map,this._updateState=this._updateState&~S}get updateComplete(){return this._getUpdateComplete()}_getUpdateComplete(){return this._updatePromise}shouldUpdate(e){return!0}update(e){void 0!==this._reflectingProperties&&this._reflectingProperties.size>0&&(this._reflectingProperties.forEach((e,t)=>this._propertyToAttribute(t,this[t],e)),this._reflectingProperties=void 0),this._markUpdated()}updated(e){}firstUpdated(e){}}C[P]=!0;
+/**
+ * @license
+ * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
+ * This code may only be used under the BSD style license found at
+ * http://polymer.github.io/LICENSE.txt
+ * The complete set of authors may be found at
+ * http://polymer.github.io/AUTHORS.txt
+ * The complete set of contributors may be found at
+ * http://polymer.github.io/CONTRIBUTORS.txt
+ * Code distributed by Google as part of the polymer project is also
+ * subject to an additional IP rights grant found at
+ * http://polymer.github.io/PATENTS.txt
+ */
+const O=(e,t)=>"method"!==t.kind||!t.descriptor||"value"in t.descriptor?{kind:"field",key:Symbol(),placement:"own",descriptor:{},initializer(){"function"==typeof t.initializer&&(this[t.key]=t.initializer.call(this))},finisher(r){r.createProperty(t.key,e)}}:Object.assign(Object.assign({},t),{finisher(r){r.createProperty(t.key,e)}}),N=(e,t,r)=>{t.constructor.createProperty(r,e)};function A(e){return(t,r)=>void 0!==r?N(e,t,r):O(e,t)}function j(e,t){return(r,s)=>{const i={get(){return this.renderRoot.querySelector(e)},enumerable:!0,configurable:!0};if(t){const t="symbol"==typeof s?Symbol():`__${s}`;i.get=function(){return void 0===this[t]&&(this[t]=this.renderRoot.querySelector(e)),this[t]}}return void 0!==s?E(i,r,s):T(i,r)}}const E=(e,t,r)=>{Object.defineProperty(t,r,e)},T=(e,t)=>({kind:"method",placement:"prototype",key:t.key,descriptor:e});const U=Element.prototype;U.msMatchesSelector||U.webkitMatchesSelector;
+/**
+@license
+Copyright (c) 2019 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at
+http://polymer.github.io/LICENSE.txt The complete set of authors may be found at
+http://polymer.github.io/AUTHORS.txt The complete set of contributors may be
+found at http://polymer.github.io/CONTRIBUTORS.txt Code distributed by Google as
+part of the polymer project is also subject to an additional IP rights grant
+found at http://polymer.github.io/PATENTS.txt
+*/
+const V=window.ShadowRoot&&(void 0===window.ShadyCSS||window.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,R=Symbol();class I{constructor(e,t){if(t!==R)throw new Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=e}get styleSheet(){return void 0===this._styleSheet&&(V?(this._styleSheet=new CSSStyleSheet,this._styleSheet.replaceSync(this.cssText)):this._styleSheet=null),this._styleSheet}toString(){return this.cssText}}const M=e=>new I(String(e),R),q=(e,...t)=>{const r=t.reduce((t,r,s)=>t+(e=>{if(e instanceof I)return e.cssText;if("number"==typeof e)return e;throw new Error(`Value passed to 'css' function must be a 'css' function result: ${e}. Use 'unsafeCSS' to pass non-literal values, but\n            take care to ensure page security.`)})(r)+e[s+1],e[0]);return new I(r,R)};
+/**
+ * @license
+ * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
+ * This code may only be used under the BSD style license found at
+ * http://polymer.github.io/LICENSE.txt
+ * The complete set of authors may be found at
+ * http://polymer.github.io/AUTHORS.txt
+ * The complete set of contributors may be found at
+ * http://polymer.github.io/CONTRIBUTORS.txt
+ * Code distributed by Google as part of the polymer project is also
+ * subject to an additional IP rights grant found at
+ * http://polymer.github.io/PATENTS.txt
+ */
+(window.litElementVersions||(window.litElementVersions=[])).push("2.4.0");const L={};class $ extends C{static getStyles(){return this.styles}static _getUniqueStyles(){if(this.hasOwnProperty(JSCompiler_renameProperty("_styles",this)))return;const e=this.getStyles();if(Array.isArray(e)){const t=(e,r)=>e.reduceRight((e,r)=>Array.isArray(r)?t(r,e):(e.add(r),e),r),r=t(e,new Set),s=[];r.forEach(e=>s.unshift(e)),this._styles=s}else this._styles=void 0===e?[]:[e];this._styles=this._styles.map(e=>{if(e instanceof CSSStyleSheet&&!V){const t=Array.prototype.slice.call(e.cssRules).reduce((e,t)=>e+t.cssText,"");return M(t)}return e})}initialize(){super.initialize(),this.constructor._getUniqueStyles(),this.renderRoot=this.createRenderRoot(),window.ShadowRoot&&this.renderRoot instanceof window.ShadowRoot&&this.adoptStyles()}createRenderRoot(){return this.attachShadow({mode:"open"})}adoptStyles(){const e=this.constructor._styles;0!==e.length&&(void 0===window.ShadyCSS||window.ShadyCSS.nativeShadow?V?this.renderRoot.adoptedStyleSheets=e.map(e=>e instanceof CSSStyleSheet?e:e.styleSheet):this._needsShimAdoptedStyleSheets=!0:window.ShadyCSS.ScopingShim.prepareAdoptedCssText(e.map(e=>e.cssText),this.localName))}connectedCallback(){super.connectedCallback(),this.hasUpdated&&void 0!==window.ShadyCSS&&window.ShadyCSS.styleElement(this)}update(e){const t=this.render();super.update(e),t!==L&&this.constructor.render(t,this.renderRoot,{scopeName:this.localName,eventContext:this}),this._needsShimAdoptedStyleSheets&&(this._needsShimAdoptedStyleSheets=!1,this.constructor._styles.forEach(e=>{const t=document.createElement("style");t.textContent=e.cssText,this.renderRoot.appendChild(t)}))}render(){return L}}$.finalized=!0,$.render=(e,t,r)=>{if(!r||"object"!=typeof r||!r.scopeName)throw new Error("The `scopeName` option is required.");const i=r.scopeName,a=c.a.has(t),n=m&&11===t.nodeType&&!!t.host,o=n&&!f.has(i),l=o?document.createDocumentFragment():t;if(Object(c.b)(e,l,Object.assign({templateFactory:g(i)},r)),o){const e=c.a.get(l);c.a.delete(l);const r=e.value instanceof p.a?e.value.template:void 0;v(i,l,r),Object(s.b)(t,t.firstChild),t.appendChild(l),c.a.set(t,e)}!a&&n&&window.ShadyCSS.styleElement(t.host)}},818:function(e,t,r){"use strict";r.d(t,"e",(function(){return n.a})),r.d(t,"g",(function(){return o.b})),r.d(t,"h",(function(){return o.c})),r.d(t,"a",(function(){return s.b})),r.d(t,"b",(function(){return s.e})),r.d(t,"c",(function(){return s.g})),r.d(t,"d",(function(){return l.c})),r.d(t,"f",(function(){return c})),r.d(t,"i",(function(){return d}));var s=r(912);
+/**
+ * @license
+ * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
+ * This code may only be used under the BSD style license found at
+ * http://polymer.github.io/LICENSE.txt
+ * The complete set of authors may be found at
+ * http://polymer.github.io/AUTHORS.txt
+ * The complete set of contributors may be found at
+ * http://polymer.github.io/CONTRIBUTORS.txt
+ * Code distributed by Google as part of the polymer project is also
+ * subject to an additional IP rights grant found at
+ * http://polymer.github.io/PATENTS.txt
+ */const i=new class{handleAttributeExpressions(e,t,r,i){const a=t[0];if("."===a){return new s.f(e,t.slice(1),r).parts}return"@"===a?[new s.d(e,t.slice(1),i.eventContext)]:"?"===a?[new s.c(e,t.slice(1),r)]:new s.a(e,t,r).parts}handleTextExpression(e){return new s.e(e)}};var a=r(1975),n=r(2379),o=r(1571),l=(r(2380),r(2378),r(1976),r(2381),r(1291));
+/**
+ * @license
+ * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
+ * This code may only be used under the BSD style license found at
+ * http://polymer.github.io/LICENSE.txt
+ * The complete set of authors may be found at
+ * http://polymer.github.io/AUTHORS.txt
+ * The complete set of contributors may be found at
+ * http://polymer.github.io/CONTRIBUTORS.txt
+ * Code distributed by Google as part of the polymer project is also
+ * subject to an additional IP rights grant found at
+ * http://polymer.github.io/PATENTS.txt
+ */
+"undefined"!=typeof window&&(window.litHtmlVersions||(window.litHtmlVersions=[])).push("1.3.0");const c=(e,...t)=>new a.b(e,t,"html",i),d=(e,...t)=>new a.a(e,t,"svg",i)},912:function(e,t,r){"use strict";r.d(t,"h",(function(){return c})),r.d(t,"a",(function(){return p})),r.d(t,"b",(function(){return u})),r.d(t,"e",(function(){return h})),r.d(t,"c",(function(){return m})),r.d(t,"f",(function(){return g})),r.d(t,"g",(function(){return b})),r.d(t,"d",(function(){return v}));var s=r(2379),i=r(1571),a=r(2380),n=r(2381),o=r(1975),l=r(1291);
+/**
+ * @license
+ * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
+ * This code may only be used under the BSD style license found at
+ * http://polymer.github.io/LICENSE.txt
+ * The complete set of authors may be found at
+ * http://polymer.github.io/AUTHORS.txt
+ * The complete set of contributors may be found at
+ * http://polymer.github.io/CONTRIBUTORS.txt
+ * Code distributed by Google as part of the polymer project is also
+ * subject to an additional IP rights grant found at
+ * http://polymer.github.io/PATENTS.txt
+ */
+const c=e=>null===e||!("object"==typeof e||"function"==typeof e),d=e=>Array.isArray(e)||!(!e||!e[Symbol.iterator]);class p{constructor(e,t,r){this.dirty=!0,this.element=e,this.name=t,this.strings=r,this.parts=[];for(let s=0;s<r.length-1;s++)this.parts[s]=this._createPart()}_createPart(){return new u(this)}_getValue(){const e=this.strings,t=e.length-1,r=this.parts;if(1===t&&""===e[0]&&""===e[1]){const e=r[0].value;if("symbol"==typeof e)return String(e);if("string"==typeof e||!d(e))return e}let s="";for(let i=0;i<t;i++){s+=e[i];const t=r[i];if(void 0!==t){const e=t.value;if(c(e)||!d(e))s+="string"==typeof e?e:String(e);else for(const t of e)s+="string"==typeof t?t:String(t)}}return s+=e[t],s}commit(){this.dirty&&(this.dirty=!1,this.element.setAttribute(this.name,this._getValue()))}}class u{constructor(e){this.value=void 0,this.committer=e}setValue(e){e===a.a||c(e)&&e===this.value||(this.value=e,Object(s.b)(e)||(this.committer.dirty=!0))}commit(){for(;Object(s.b)(this.value);){const e=this.value;this.value=a.a,e(this)}this.value!==a.a&&this.committer.commit()}}class h{constructor(e){this.value=void 0,this.__pendingValue=void 0,this.options=e}appendInto(e){this.startNode=e.appendChild(Object(l.c)()),this.endNode=e.appendChild(Object(l.c)())}insertAfterNode(e){this.startNode=e,this.endNode=e.nextSibling}appendIntoPart(e){e.__insert(this.startNode=Object(l.c)()),e.__insert(this.endNode=Object(l.c)())}insertAfterPart(e){e.__insert(this.startNode=Object(l.c)()),this.endNode=e.endNode,e.endNode=this.startNode}setValue(e){this.__pendingValue=e}commit(){if(null===this.startNode.parentNode)return;for(;Object(s.b)(this.__pendingValue);){const e=this.__pendingValue;this.__pendingValue=a.a,e(this)}const e=this.__pendingValue;e!==a.a&&(c(e)?e!==this.value&&this.__commitText(e):e instanceof o.b?this.__commitTemplateResult(e):e instanceof Node?this.__commitNode(e):d(e)?this.__commitIterable(e):e===a.b?(this.value=a.b,this.clear()):this.__commitText(e))}__insert(e){this.endNode.parentNode.insertBefore(e,this.endNode)}__commitNode(e){this.value!==e&&(this.clear(),this.__insert(e),this.value=e)}__commitText(e){const t=this.startNode.nextSibling,r="string"==typeof(e=null==e?"":e)?e:String(e);t===this.endNode.previousSibling&&3===t.nodeType?t.data=r:this.__commitNode(document.createTextNode(r)),this.value=e}__commitTemplateResult(e){const t=this.options.templateFactory(e);if(this.value instanceof n.a&&this.value.template===t)this.value.update(e.values);else{const r=new n.a(t,e.processor,this.options),s=r._clone();r.update(e.values),this.__commitNode(s),this.value=r}}__commitIterable(e){Array.isArray(this.value)||(this.value=[],this.clear());const t=this.value;let r,s=0;for(const i of e)r=t[s],void 0===r&&(r=new h(this.options),t.push(r),0===s?r.appendIntoPart(this):r.insertAfterPart(t[s-1])),r.setValue(i),r.commit(),s++;s<t.length&&(t.length=s,this.clear(r&&r.endNode))}clear(e=this.startNode){Object(i.b)(this.startNode.parentNode,e.nextSibling,this.endNode)}}class m{constructor(e,t,r){if(this.value=void 0,this.__pendingValue=void 0,2!==r.length||""!==r[0]||""!==r[1])throw new Error("Boolean attributes can only contain a single expression");this.element=e,this.name=t,this.strings=r}setValue(e){this.__pendingValue=e}commit(){for(;Object(s.b)(this.__pendingValue);){const e=this.__pendingValue;this.__pendingValue=a.a,e(this)}if(this.__pendingValue===a.a)return;const e=!!this.__pendingValue;this.value!==e&&(e?this.element.setAttribute(this.name,""):this.element.removeAttribute(this.name),this.value=e),this.__pendingValue=a.a}}class g extends p{constructor(e,t,r){super(e,t,r),this.single=2===r.length&&""===r[0]&&""===r[1]}_createPart(){return new b(this)}_getValue(){return this.single?this.parts[0].value:super._getValue()}commit(){this.dirty&&(this.dirty=!1,this.element[this.name]=this._getValue())}}class b extends u{}let f=!1;(()=>{try{const e={get capture(){return f=!0,!1}};window.addEventListener("test",e,e),window.removeEventListener("test",e,e)}catch(e){}})();class v{constructor(e,t,r){this.value=void 0,this.__pendingValue=void 0,this.element=e,this.eventName=t,this.eventContext=r,this.__boundHandleEvent=e=>this.handleEvent(e)}setValue(e){this.__pendingValue=e}commit(){for(;Object(s.b)(this.__pendingValue);){const e=this.__pendingValue;this.__pendingValue=a.a,e(this)}if(this.__pendingValue===a.a)return;const e=this.__pendingValue,t=this.value,r=null==e||null!=t&&(e.capture!==t.capture||e.once!==t.once||e.passive!==t.passive),i=null!=e&&(null==t||r);r&&this.element.removeEventListener(this.eventName,this.__boundHandleEvent,this.__options),i&&(this.__options=y(e),this.element.addEventListener(this.eventName,this.__boundHandleEvent,this.__options)),this.value=e,this.__pendingValue=a.a}handleEvent(e){"function"==typeof this.value?this.value.call(this.eventContext||this.element,e):this.value.handleEvent(e)}}const y=e=>e&&(f?{capture:e.capture,passive:e.passive,once:e.once}:e.capture)}}]);
+//# sourceMappingURL=vendors~auth-not-required-app~brand-kit-context-views~brand-kit-editor~logged-in-app~react~search-co~82fad89c-3ea019d7.js.map
